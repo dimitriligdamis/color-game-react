@@ -1,0 +1,27 @@
+@use "../../styles/vars";
+
+.App {
+  position: relative;
+
+  &__header {
+    background-color: vars.$bg-header;
+    min-height: vars.$min-height-header;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__main {
+    background-color: vars.$bg-main;
+    min-height: calc(100vh - vars.$min-height-header);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+  }
+}

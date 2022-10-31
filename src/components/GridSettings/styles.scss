@@ -1,0 +1,31 @@
+@use "../../styles/vars";
+
+$padding-form: 2rem;
+$border-form-input: none;
+$border-radius-form: 10px;
+
+$font-size-input: 1.7rem;
+
+.GridSettings {
+  &__input {
+    margin-right: 0.3rem;
+    padding: $padding-form;
+    border: $border-form-input;
+    font-size: $font-size-input;
+  }
+
+  &__input:first-child {
+    border-top-left-radius: $border-radius-form;
+    border-bottom-left-radius: $border-radius-form;
+  }
+
+  &__submit {
+    background-color: hsl(265deg 70% 65%);
+    padding: $padding-form;
+    border: $border-form-input;
+    font-size: $font-size-input;
+    color: vars.$white;
+    border-top-right-radius: $border-radius-form;
+    border-bottom-right-radius: $border-radius-form;
+  }
+}
