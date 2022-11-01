@@ -1,3 +1,4 @@
+import GridInvader from "../GridInvader";
 import GridSettings from "../GridSettings";
 import "./styles.scss";
 
@@ -8,7 +9,7 @@ function App() {
         <GridSettings />
       </header>
       <main className="App__main">
-        <h1>Main</h1>
+        <GridInvader />
       </main>
       <footer className="App__footer">
         <h1>Palette</h1>
