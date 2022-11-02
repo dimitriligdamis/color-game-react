@@ -1,3 +1,5 @@
+import { useDispatch } from "react-redux";
+import { actionChangeColor } from "../../actions";
 import "./styles.scss";
 
 const palette = [
@@ -24,7 +26,22 @@ const palette = [
 ];
 
 function ColorPalette() {
+  const dispatch = useDispatch();
   const namePaletteColor = "paletteColor";
+
+  const handleClickLabel = (event) => {
+    const colorSelected = {
+      bgColor: event.target.style.backgroundColor,
+      borderColor: event.target.style.borderColor,
+    };
+
+    dispatch(
+      actionChangeColor({
+        bgColor: colorSelected.bgColor,
+        borderColor: colorSelected.borderColor,
+      })
+    );
+  };
 
   return (
     <section className="ColorPalette">
@@ -39,10 +56,15 @@ function ColorPalette() {
           }}
         >
           <input
+            onChange={handleClickLabel}
             className="ColorPalette__inputRadio"
             id={color.id}
             type="radio"
             name={namePaletteColor}
+            style={{
+              backgroundColor: color.bgColor,
+              borderColor: color.borderColor,
+            }}
           />
         </label>
       ))}

@@ -1,4 +1,4 @@
-import { CHANGE_GRID_SIZE } from "../actions";
+import { CHANGE_COLOR, CHANGE_GRID_SIZE } from "../actions";
 
 const initialState = {
   gridNumber: 8,
@@ -16,6 +16,12 @@ function reducer(state = initialState, action = {}) {
         ...state,
         gridNumber: Number(action.payload.gridNumber),
         pixelNumber: Number(action.payload.pixelNumber),
+      };
+    case CHANGE_COLOR:
+      return {
+        ...state,
+        bgColor: action.payload.bgColor,
+        borderColor: action.payload.borderColor,
       };
     default:
       return state;
