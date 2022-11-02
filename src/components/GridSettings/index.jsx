@@ -9,13 +9,15 @@ function GridSettings() {
     <form onSubmit={handleSubmit} className="GridSettings">
       <input
         className="GridSettings__input"
-        type="text"
+        type="number"
         placeholder="Taille de la grille"
+        required
       />
       <input
         className="GridSettings__input"
-        type="text"
+        type="number"
         placeholder="Taille des pixels"
+        required
       />
       <button className="GridSettings__submit" type="submit">
         Valider

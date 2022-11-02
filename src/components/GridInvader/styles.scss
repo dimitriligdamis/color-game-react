@@ -8,8 +8,6 @@ $grey: #d0d9e1;
   }
 
   &__square {
-    background-color: $grey;
-    border: 2px solid darken($color: $grey, $amount: 30);
     width: 25px;
     height: 25px;
   }
