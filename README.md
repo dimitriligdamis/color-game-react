@@ -4,8 +4,13 @@ README template:
 
 ## Table of contents
 
+- [Url site](#url-site)
 - [Screenshot](#screenshot)
 - [Built with](#built-with)
+
+## Url site
+
+[https://color-square-game.netlify.app/](https://color-square-game.netlify.app/)
 
 ## Screenshot
 
