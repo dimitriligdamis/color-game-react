@@ -1,15 +1,13 @@
 import { useState } from "react";
+import { useSelector } from "react-redux";
 import "./styles.scss";
 
 function GridInvader() {
-  const [gridNumber, setGridNumber] = useState(8);
-
-  const [defaultBgColor, setDefaultBgColor] = useState("rgb(208, 217, 225)");
-  const [defaultBorderColor, setDefaultBorderColor] =
-    useState("rgb(128, 142, 155)");
-
-  const [bgColor, setBgColor] = useState("rgb(72 84 96)");
-  const [borderColor, setborderColor] = useState("rgb(30 39 46)");
+  const gridNumber = useSelector((state) => state.gridNumber);
+  const defaultBgColor = useSelector((state) => state.defaultBgColor);
+  const defaultBorderColor = useSelector((state) => state.defaultBorderColor);
+  const bgColor = useSelector((state) => state.bgColor);
+  const borderColor = useSelector((state) => state.borderColor);
 
   const handleClickSquare = (event) => {
     const squareClicked = event.target;
