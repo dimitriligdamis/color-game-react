@@ -1,3 +1,4 @@
+import ColorPalette from "../ColorPalette";
 import GridInvader from "../GridInvader";
 import GridSettings from "../GridSettings";
 import "./styles.scss";
@@ -12,7 +13,7 @@ function App() {
         <GridInvader />
       </main>
       <footer className="App__footer">
-        <h1>Palette</h1>
+        <ColorPalette />
       </footer>
     </div>
   );

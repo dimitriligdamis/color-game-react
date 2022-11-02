@@ -1,0 +1,28 @@
+@use "../../styles/vars";
+
+.ColorPalette {
+  background-color: #4744a2;
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+
+  &__label {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 2px solid;
+
+    &:has(> input[type="radio"]:checked) {
+      transform: scale(1.3);
+    }
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+  }
+
+  &__inputRadio {
+    display: none;
+  }
+}
