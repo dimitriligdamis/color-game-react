@@ -11,15 +11,15 @@ README template:
 
 ### Preview mobile
 
-![Design mobile]()
+![Design mobile](./design/preview-mobile.png)
 
 ### Preview desktop
 
-![Design desktop]()
+![Design desktop](./design/preview-desktop.png)
 
 ### Preview active states
 
-![Design active states]()
+![Design active states](./design/active-state.png)
 
 ## Built with
 

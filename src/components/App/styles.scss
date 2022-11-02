@@ -17,6 +17,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media only screen and (max-width: vars.$mobile) {
+      min-height: calc(100vh - vars.$min-height-header-mobile);
+    }
   }
 
   &__footer {

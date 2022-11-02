@@ -7,11 +7,26 @@ $border-radius-form: 10px;
 $font-size-input: 1.7rem;
 
 .GridSettings {
+  display: flex;
+  justify-content: center;
+
+  @media only screen and (max-width: vars.$mobile) {
+    flex-direction: column;
+    gap: 10px;
+    padding: $padding-form;
+  }
+
   &__input {
     margin-right: 0.3rem;
     padding: $padding-form;
     border: $border-form-input;
     font-size: $font-size-input;
+    width: 30%;
+
+    @media only screen and (max-width: vars.$mobile) {
+      width: 100%;
+      border-radius: $border-radius-form;
+    }
   }
 
   &__input:first-child {
@@ -27,5 +42,9 @@ $font-size-input: 1.7rem;
     color: vars.$white;
     border-top-right-radius: $border-radius-form;
     border-bottom-right-radius: $border-radius-form;
+
+    @media only screen and (max-width: vars.$mobile) {
+      border-radius: $border-radius-form;
+    }
   }
 }
