@@ -4,6 +4,7 @@ import "./styles.scss";
 
 function GridInvader() {
   const gridNumber = useSelector((state) => state.gridNumber);
+  const pixelNumber = useSelector((state) => state.pixelNumber);
   const defaultBgColor = useSelector((state) => state.defaultBgColor);
   const defaultBorderColor = useSelector((state) => state.defaultBorderColor);
   const bgColor = useSelector((state) => state.bgColor);
@@ -37,6 +38,8 @@ function GridInvader() {
               style={{
                 backgroundColor: defaultBgColor,
                 border: `2px solid ${defaultBorderColor}`,
+                width: `${pixelNumber}px`,
+                height: `${pixelNumber}px`,
               }}
             ></li>
           ))}

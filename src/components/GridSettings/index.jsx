@@ -1,17 +1,22 @@
 import { createContext, useState } from "react";
+import { useDispatch } from "react-redux";
+import { actionChangeGridSize } from "../../actions";
 import "./styles.scss";
 
 function GridSettings() {
-  const [gridSize, setGridSize] = useState(8);
-  const [squareSizePx, setSquareSizePx] = useState(25);
+  const dispatch = useDispatch();
 
   const [valueGrid, setValueGrid] = useState("");
   const [valueSquarePx, setValueSquarePx] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setGridSize(valueGrid);
-    setSquareSizePx(valueSquarePx);
+    dispatch(
+      actionChangeGridSize({
+        gridNumber: valueGrid,
+        pixelNumber: valueSquarePx,
+      })
+    );
 
     setValueGrid("");
     setValueSquarePx("");
