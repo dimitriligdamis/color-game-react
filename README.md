@@ -30,4 +30,3 @@ README template:
 
 - [React](https://reactjs.org/) - JS library
 - Sass
-- Mobile-first workflow
