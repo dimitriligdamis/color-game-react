@@ -1,6 +1,6 @@
 README template:
 
-# Frontend Mentor - Product preview card component
+# Color game react
 
 ## Table of contents
 
